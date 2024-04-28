@@ -39,7 +39,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
             height: 40,
             child: TextField(
               decoration: InputDecoration(
-                contentPadding: EdgeInsets.symmetric(vertical: 5),
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 5, horizontal: 15),
                 hintText: "Search",
                 prefixIcon: Icon(Icons.search),
                 border: OutlineInputBorder(),
