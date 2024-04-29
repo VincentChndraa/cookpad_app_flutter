@@ -1,4 +1,4 @@
-import 'package:cookpad/home_page.dart';
+import 'package:cookpad/main_page.dart';
 import 'package:cookpad/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
           textTheme: GoogleFonts.openSansTextTheme()),
-      home: LoginScreen(),
+      home: BottomNavigation(),
     );
   }
 }

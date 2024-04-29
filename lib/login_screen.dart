@@ -1,4 +1,4 @@
-import 'package:cookpad/home_page.dart';
+import 'package:cookpad/main_page.dart';
 import 'package:cookpad/widget/button2custom.dart';
 import 'package:cookpad/widget/button_custom.dart';
 import 'package:cookpad/widget/textfield_custom.dart';
@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (email == "admin" && password == "password") {
       Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(builder: (_) => HomePageScreen()),
+          MaterialPageRoute(builder: (_) => BottomNavigation()),
           (route) => false);
     } else {
       print("Login Gagal");
