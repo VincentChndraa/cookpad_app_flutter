@@ -1,6 +1,7 @@
 class Resep {
   String image;
   String judul;
+  String deskripsi;
   String bahan2;
   String tutorial;
   String durasi;
@@ -8,6 +9,7 @@ class Resep {
   Resep({
     required this.image,
     required this.judul,
+    required this.deskripsi,
     required this.tutorial,
     required this.bahan2,
     required this.durasi,
@@ -18,6 +20,11 @@ List<Resep> dataRecipe = [
   Resep(
     image: "assets/images/soto_ayam.jpeg",
     judul: "Soto Ayam Lamongan",
+    deskripsi: """
+Siapa yang tidak suka soto. Salah satu masakan nusantara berkuah yang seger banget. Ada banyak macam soto di Indonesia ini . Dan keluargaku suka sekali semua macam soto karena berkuah dan segar.
+
+Minggu pagi saatnya kumpul pastinyaa lebih ceria karena adanya sarapan soto.. wuiih enaak pokoknyaa.
+Terimakasih inspirasinya mbak nuri """,
     durasi: "1 jam yang lalu",
     bahan2: """
 4 potong ayam
@@ -61,6 +68,9 @@ Secukupnya garam dan kaldu
   Resep(
     image: "assets/images/opor_ayam.jpg",
     judul: "Opor Ayam Kampung",
+    deskripsi: """
+Di resep ini ayam kampungnya terlebih dahulu saya rebus dengan presto agar lebih cepat empuk, karena ayam kampung yang saya gunakan lumayan tua bukan ayam kampung muda. Kalau kalian ingin tidak pakai presto juga tidak apa2.
+""",
     durasi: "1 jam yang lalu",
     bahan2: """
 1/2 ekor ayam kampung
