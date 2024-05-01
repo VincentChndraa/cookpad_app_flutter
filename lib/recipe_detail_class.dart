@@ -1,23 +1,28 @@
 class Resep {
+  String id;
   String image;
   String judul;
   String deskripsi;
   String bahan2;
   String tutorial;
   String durasi;
+  bool isFavorite;
 
   Resep({
+    required this.id,
     required this.image,
     required this.judul,
     required this.deskripsi,
     required this.tutorial,
     required this.bahan2,
     required this.durasi,
+    this.isFavorite = false,
   });
 }
 
 List<Resep> dataRecipe = [
   Resep(
+    id: "R01",
     image: "assets/images/soto_ayam.jpeg",
     judul: "Soto Ayam Lamongan",
     deskripsi: """
@@ -66,6 +71,7 @@ Secukupnya garam dan kaldu
 """,
   ),
   Resep(
+    id: "RO2",
     image: "assets/images/opor_ayam.jpg",
     judul: "Opor Ayam Kampung",
     deskripsi: """

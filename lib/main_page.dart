@@ -1,5 +1,7 @@
+import 'package:cookpad/page/favorite_page.dart';
 import 'package:cookpad/page/home_page.dart';
 import 'package:cookpad/page/search_page.dart';
+import 'package:cookpad/recipe_detail_class.dart';
 import 'package:cookpad/widget/textfield_custom.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +20,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
     HomeScreen(),
     SearchPage(),
     Center(child: Text('add')),
-    Center(child: Text('payemnt')),
+    FavoriteScreen(dataRecipe),
     Center(child: Text('profile')),
   ];
 
