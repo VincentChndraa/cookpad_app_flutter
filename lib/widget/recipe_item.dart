@@ -1,55 +1,56 @@
 import 'dart:ui';
 
 import 'package:cookpad/recipe_class.dart';
+import 'package:cookpad/recipe_detail_class.dart';
 import 'package:flutter/material.dart';
 
 class RecipeItem extends StatelessWidget {
-  final Recipe recipe;
-  const RecipeItem({super.key, required this.recipe});
+  final Resep resep;
+  const RecipeItem({super.key, required this.resep});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 280,
-        width: 220,
+        height: 210,
+        width: 150,
         child: Stack(
           children: [
             Container(
-              height: 280,
-              width: 220,
+              height: 210,
+              width: 150,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                    image: AssetImage(recipe.image),
+                    image: AssetImage(resep.image),
                     fit: BoxFit.cover,
                   )),
             ),
-            Positioned(
-              top: 8,
-              left: 8,
-              child: ClipRRect(
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(
-                    sigmaX: 5,
-                    sigmaY: 5,
-                  ),
-                  child: Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.5),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Text(
-                      recipe.category,
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyMedium
-                          ?.copyWith(color: Colors.white),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            // Positioned(
+            //   top: 8,
+            //   left: 8,
+            //   child: ClipRRect(
+            //     child: BackdropFilter(
+            //       filter: ImageFilter.blur(
+            //         sigmaX: 5,
+            //         sigmaY: 5,
+            //       ),
+            //       child: Container(
+            //         padding: const EdgeInsets.all(8),
+            //         decoration: BoxDecoration(
+            //           color: Colors.black.withOpacity(0.5),
+            //           borderRadius: BorderRadius.circular(8),
+            //         ),
+            //         child: Text(
+            //           resep.category,
+            //           style: Theme.of(context)
+            //               .textTheme
+            //               .bodyMedium
+            //               ?.copyWith(color: Colors.white),
+            //         ),
+            //       ),
+            //     ),
+            //   ),
+            // ),
             Positioned(
               bottom: 8,
               left: 8,
@@ -74,7 +75,7 @@ class RecipeItem extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: Text(
-                                  recipe.name,
+                                  resep.judul,
                                   style: Theme.of(context)
                                       .textTheme
                                       .bodyLarge
@@ -92,7 +93,7 @@ class RecipeItem extends StatelessWidget {
                           ),
                           const SizedBox(height: 8),
                           Text(
-                            "${recipe.duration} | ${recipe}",
+                            "${resep.durasi} | ${resep}",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyMedium
