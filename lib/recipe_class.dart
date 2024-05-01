@@ -16,7 +16,7 @@ class Recipe {
 
 final recipeData = [
   Recipe(
-    name: "Beef Bibimbap with Triple Egg ",
+    name: "Beef Bibimbap with Three Fried Eggs ",
     image: "assets/images/beef_bibimbap_recipe.jpeg",
     category: "Beef",
     duration: "1 Hour",
@@ -25,7 +25,7 @@ final recipeData = [
   Recipe(
     name: "Nasi Goreng ",
     image: "assets/images/beef_bibimbap_recipe.jpeg",
-    category: "Nasi",
+    category: "Rice",
     duration: "30 Minutes",
     serving: "3 Serving",
   ),

@@ -1,4 +1,5 @@
 import 'package:cookpad/main_page.dart';
+import 'package:cookpad/page/register.dart';
 import 'package:cookpad/widget/button2custom.dart';
 import 'package:cookpad/widget/button_custom.dart';
 import 'package:cookpad/widget/textfield_custom.dart';
@@ -173,14 +174,26 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Belum punya akun?"),
-                    const SizedBox(width: 4.0),
-                    Text(
-                      "Daftar",
-                      style: TextStyle(
-                          color: Colors.grey[850], fontWeight: FontWeight.bold),
-                    )
+                    SizedBox(width: 4.0),
+                    GestureDetector(
+                      child: Text(
+                        'Daftar',
+                        style: TextStyle(
+                          color: Colors.grey[850],
+                          fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegisterScreen()),
+                        );
+                      },
+                    ),
                   ],
-                )
+                ),
               ],
             )
           ],
