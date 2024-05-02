@@ -97,7 +97,7 @@ class DetailResep extends StatelessWidget {
                 color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
           ),
           Text(
-            resep.tutorial,
+            resep.cara_memasak,
             style:
                 TextStyle(color: Colors.black, fontSize: 14, height: 150 / 100),
           )

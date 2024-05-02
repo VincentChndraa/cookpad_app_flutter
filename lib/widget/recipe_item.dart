@@ -22,12 +22,12 @@ class RecipeItem extends StatelessWidget {
       },
       child: Container(
           height: 210,
-          width: 150,
+          width: ((MediaQuery.of(context).size.width - 25 - 25) / 2) - 8,
           child: Stack(
             children: [
               Container(
                 height: 210,
-                width: 150,
+                width: ((MediaQuery.of(context).size.width - 25 - 25) / 2) - 8,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(

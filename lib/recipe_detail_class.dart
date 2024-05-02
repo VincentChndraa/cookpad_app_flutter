@@ -4,7 +4,7 @@ class Resep {
   String judul;
   String deskripsi;
   String bahan2;
-  String cara memasak;
+  String cara_memasak;
   String durasi;
   bool isFavorite;
 
@@ -101,7 +101,7 @@ Bumbu penyedap : garam, kaldu ayam / msg, gula merah
 2 lembar daun jeruk
 1 batang sereh (geprek)
 """,
-    cara_memasak  : """
+    cara_memasak: """
 1. Siapkan bahan-bahannya.
 2. Rebus ayam dengan panci presto kira-kira 20 menit dihitung dari waktu mendidih. (Tambahkan 1 batang sereh).
 3. Haluskan bumbu halus. Tumis dengan secukupnya minyak goreng, tambahkan bahan aromatik, masak sampai bumbu matang.
@@ -111,6 +111,7 @@ Bumbu penyedap : garam, kaldu ayam / msg, gula merah
   ),
   //3.Nasi Liwet//
   Resep(
+    id: "R03",
     image: "assets/images/nasi_liwet.jpg",
     judul: "Nasi Liwet Gurih ",
     deskripsi: """
@@ -129,7 +130,7 @@ Bumbu Cemplung
 Garam secukupnya
 Kaldu bubuk secukupnya 
 """,
-    cara_memasak  : """
+    cara_memasak: """
 1. Persiapan alat dan bahan. Beras dicuci dan ditiriskan. Bumbu cemplung daun salam, sereh dan pandan dicuci bersih.
 2. Siapkan kuali tanah liat. Masukkan daun salam, sereh dan pandan.
 3. Tambahkan beras, santan dan air secukupnya hingga merendam beras. Tambahkan juga garam dan kaldu bubuk. Aduk pelan agar tercampur.
@@ -137,8 +138,9 @@ Kaldu bubuk secukupnya
 5. Setelah matang sajikan bersama dengan lauk pendamping
     """,
   ),
-    //4.Beef Bibimbap//
+  //4.Beef Bibimbap//
   Resep(
+    id: "R04",
     image: "assets/images/beef_bibimbap_recipe.jpeg",
     judul: "Beef Bibimbap",
     deskripsi: """
@@ -167,7 +169,7 @@ Saus bibimbap
 Gula secukupnya
 Garam secukupnya
 """,
-    cara_memasak  : """
+    cara_memasak: """
 1. Cuci bersih semua sayuran yang akan di gunakan.
 2. Masak daging yang sudah di marinasi degan bawang bombai dan wortel yang sudah di iris seperti korek (lihat resep saya untuk beef bulgogi).
 3. Lalu tumis bayam, tauge, dan paprika menggunakan minyak widen, dan bawang putih yanh sudah di haluskan, garam dan lada bubuk. Lalu taburi biji wijen. Tumis hingga layu ,Lalu ceplok 1 butir telur
@@ -175,9 +177,10 @@ Garam secukupnya
 5. Lalu campur nasi putih dengan semua sayuran dan daging tadi, juga telur ceploknya, dan juga saus bibimbapnya. Lalu di aduk rata sampai semuanya tercampur dan taburi dengan biji Wijen. Maka siap di nikmati.
     """,
   ),
-    //5. Salmon Teriyaki//
+  //5. Salmon Teriyaki//
   Resep(
-    image: "assets/images/Salmon Teriyaki .jpg",
+    id: "R05",
+    image: "assets/images/Salmon Teriyaki.jpg",
     judul: "Salmon Teriyaki (Donburi ala Jepang untuk orang Diet)",
     deskripsi: """
     Beberapa hari lalu aku dikasih hadiah dari temen aku jadinya auto kepikiran bikin rice bowl a.k.a donburi.
@@ -197,7 +200,7 @@ Topping (opsional)
 Sejumput wijen sangrai
 Sejumput nori bubuk
 """,
-    cara_memasak  : """
+    cara_memasak: """
 1. Siapkan bahan. Salmon filet dan kembang kol
 2. Campurkan semua bumbu untuk salmon. Aduk rata. Lalu masukkan salmon. Balurkan merata. Diamkan sambil membuat nasi kembang kol.
 3. Rendam kembang kol dengan air garam untuk memastikan ulat mati dan pergi. Parut bagian bunga nya (bagian batangnya bisa disimpan untuk membuat tumisan atau masakan lain)
@@ -209,6 +212,7 @@ Sejumput nori bubuk
   ),
   //6. Crispy Chicken Skin with salted egg sauce//
   Resep(
+    id: "R06",
     image: "assets/images/ChickenSkinSaltedEgg.jpg",
     judul: "Crispy Chicken Skin with Salted Egg Sauce",
     deskripsi: """
@@ -231,7 +235,7 @@ Salted egg sauce :
 Garam
 Penyedap
 """,
-    cara_memasak  : """
+    cara_memasak: """
 1. Masukkan kulit ayam yang sudah dipotong-potong ke dalam adonan basah, kemudian pindahkan ke dalam toples yang sudah berisi tepung maizena, tutup dan kocok hingga tepung merata. Apabila kulit ayam belum terlapisi dengan baik, tambahkan lagi tepung maizena.
 2. Goreng kulit ayam yang sudah dilapisi tepung ke dalam minyak panas dengan api sedang. Setelah keemasan dan kira-kita kulit ayam sudah matang, angkat dan tiriskan.
 3. Untuk bahan saus, haluskan kuning telur dan campur dengan susu / santan.
@@ -240,8 +244,9 @@ Penyedap
 6. Terakhir, masukkan kulit ayam yang sudah digoreng, kemudian aduk hingga saus telur asin melapisi seluruh bagian kulit ayam.
     """,
   ),
-    //7.  Ayam Betutu Khas Bali//
+  //7.  Ayam Betutu Khas Bali//
   Resep(
+    id: "R07",
     image: "assets/images/AyamBetutuwithSambelMatah.jpg",
     judul: "Ayam Betutu Sambel Matah Khas Bali",
     deskripsi: """
@@ -281,7 +286,7 @@ Sambal matah
 2 tetes cuka atau jeruk nipis
 Minyak panas secukupnya 
 """,
-    cara_memasak  : """
+    cara_memasak: """
 1. Cuci ayam kampung terlebih dahulu
 2. Tumis bumbu halus dengan minyak secukupnya, jika sudah harum masukkan bumbu cacah aduk hingga tercampur rata
 3. Jika bumbu sudah matang masukkan ayam aduk bumbu kedalam ayam (usahakan masukkan bumbu kedalam ayam agar menyerap) jika sudah beri air hingga ayam terendam keseluruhan ukep hingga 3-4 jam atau sampai air surut dan bumbu menyerap (jangan lupa koreksi rasa)
@@ -289,8 +294,9 @@ Minyak panas secukupnya
 5. Jika air sudah surut dan bumbu menyerap, makan ayam betutu siap dihidangkan
     """,
   ),
-   //8. Babi Panggang Karo//
+  //8. Babi Panggang Karo//
   Resep(
+    id: "R08",
     image: "assets/images/BPK.jpg",
     judul: "Babi Panggang Karo (NON HALAL)",
     deskripsi: """
@@ -316,7 +322,7 @@ Secukupnya andaliman
 Secukupnya garam
 Secukupnya kaldu jamur
 """,
-    cara_memasak  : """
+    cara_memasak: """
 1. Marinasi daging babi dengan bumbu halus yg sudah di blend (jeruk nipis, garam, air perasan jeruk nipis, sereh) lalu tambahkan kecap dan garlic powder secukupnya (saya 2 sdk makan) lalu diamkan 30 mnt
 2. Setelah itu panggang daging babi dengan api sedang hingga matang
 3. Setelah matang potong2 dan sajikan dengan sambal cabe rawit atau sambal bpk karo (menggunakan darah).
@@ -324,8 +330,9 @@ Secukupnya kaldu jamur
 5. Setelah bumbu matang , sajikan bersama daging babi yang ada.
     """,
   ),
-    //9. Gurame Asam Manis//
+  //9. Gurame Asam Manis//
   Resep(
+    id: "R09",
     image: "assets/images/GuramiAsMa.jpg",
     judul: "Gurame AsMa (Asam Manis)",
     deskripsi: """
@@ -355,7 +362,7 @@ Bahan celupan :
 Secukupnya kaldu bubuk
 Secukupnya air dingin
 """,
-    cara_memasak  : """
+    cara_memasak: """
 1. Bersihkan ikan buang dalemnya cuci bersih
 2. Kemudian iris bagian dagingnya. Lalu potong dadu bagian dagingnya.
 3. Panaskan minyak, celupkan ikan kedalam tepung adonan. Goreng hingga kecoklatan
@@ -367,6 +374,7 @@ Secukupnya air dingin
   ),
   //10. Sayur Asem//
   Resep(
+    id: "R10",
     image: "assets/images/SA.jpg",
     judul: "Sayur Asem",
     deskripsi: """
@@ -393,7 +401,7 @@ Bumbu ulek
 3 siung bawang putih
 4 butir kemiri bulat
 """,
-    cara_memasak  : """
+    cara_memasak: """
 1. Siapkan semua bahan, Cuci bersih dan potong2 semua sayuran.
 Ulek bumbu sampai halus, sisihkan
 2. Didihkan air, masukkan bumbu ulek, laos, daun salam dan asam
@@ -404,5 +412,51 @@ Ulek bumbu sampai halus, sisihkan
 5. Taraa, cocok Maak buat makan siang2 
     """,
   ),
+];
 
+var ingredientsItems = [
+  {
+    "image": "assets/images/daging_ayam.jpg",
+    "name": "Ayam",
+  },
+  {
+    "image": "assets/images/daging_ayam.jpg",
+    "name": "Sawi Putih",
+  },
+  {
+    "image": "assets/images/daging_ayam.jpg",
+    "name": "Buncis",
+  },
+  {
+    "image": "assets/images/daging_ayam.jpg",
+    "name": "Tahu",
+  },
+  {
+    "image": "assets/images/daging_ayam.jpg",
+    "name": "Labu Siam",
+  },
+  {
+    "image": "assets/images/daging_ayam.jpg",
+    "name": "Sapi",
+  },
+  {
+    "image": "assets/images/daging_ayam.jpg",
+    "name": "Telur",
+  },
+  {
+    "image": "assets/images/daging_ayam.jpg",
+    "name": "Santan",
+  },
+  {
+    "image": "assets/images/daging_ayam.jpg",
+    "name": "Kol",
+  },
+  {
+    "image": "assets/images/daging_ayam.jpg",
+    "name": "Cabai",
+  },
+  {
+    "image": "assets/images/daging_ayam.jpg",
+    "name": "Tepung Terigu",
+  }
 ];
