@@ -109,7 +109,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
 
                 // Section 3 - Button
-                ButtonCustom(onPressed: _handleSignUp, label: "Buat Akun")
+                ButtonCustom(
+                  onPressed: _handleSignUp,
+                  label: "Buat Akun",
+                  backgroundColor: Color.fromRGBO(241, 158, 75, 1),
+                  foregroundColor: Colors.white,
+                )
               ],
             )
           ],

@@ -105,7 +105,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
 
                 // row ke 3
-                ButtonCustom(onPressed: _handleLogin, label: "Masuk"),
+                ButtonCustom(
+                  onPressed: _handleLogin,
+                  label: "Masuk",
+                  backgroundColor: Color.fromRGBO(241, 158, 75, 1),
+                  foregroundColor: Colors.white,
+                ),
                 const SizedBox(height: 20),
 
                 // row ke 4
