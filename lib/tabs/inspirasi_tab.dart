@@ -109,16 +109,17 @@ class _SecondTabState extends State<SecondTab> {
                   },
                   itemBuilder: ((context, index) {
                     final recipe = dataRecipe[index];
-                    return GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    DetailResep(resep: recipe)));
-                      },
-                      child: RecipeItem(resep: recipe),
-                    );
+                    return RecipeItem(resep: recipe);
+                    // GestureDetector(
+                    //   onTap: () {
+                    //     Navigator.push(
+                    //         context,
+                    //         MaterialPageRoute(
+                    //             builder: (context) =>
+                    //                 DetailResep(resep: recipe)));
+                    //   },
+                    //   child: RecipeItem(resep: recipe),
+                    // );
                   }),
                 ),
               )
