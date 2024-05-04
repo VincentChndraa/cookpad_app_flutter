@@ -8,29 +8,37 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class BottomNavigation extends StatefulWidget {
-  const BottomNavigation({super.key});
+  // const BottomNavigation({super.key});
 
   @override
   State<BottomNavigation> createState() => _BottomNavigationState();
 }
 
 class _BottomNavigationState extends State<BottomNavigation> {
-  int index = 0;
-  final screens = [
+  int _currentIndex = 0;
+
+  final List<Widget> screens = [
     HomeScreen(),
     SearchPage(),
     Center(child: Text('add')),
-    FavoriteScreen(dataRecipe),
+    FavoriteScreen(),
     Center(child: Text('profile')),
   ];
+
+  void onTabTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[index],
+      body: _buildBody(),
       bottomNavigationBar: NavigationBar(
-        selectedIndex: index,
-        onDestinationSelected: (index) => setState(() => this.index = index),
+        selectedIndex: _currentIndex,
+        onDestinationSelected: (index) =>
+            setState(() => this._currentIndex = index),
         // indicatorColor: Colors.amber,
         // showSelectedLabels: true,
         // showUnselectedLabels: true,
@@ -43,6 +51,22 @@ class _BottomNavigationState extends State<BottomNavigation> {
         ],
       ),
     );
-    ;
+  }
+
+  Widget _buildBody() {
+    switch (_currentIndex) {
+      case 0:
+        return HomeScreen();
+      case 1:
+        return SearchPage();
+      case 2:
+        return Center(child: Text('add'));
+      case 3:
+        return FavoriteScreen();
+      case 4:
+        return Center(child: Text("Payment"));
+      default:
+        return Container();
+    }
   }
 }

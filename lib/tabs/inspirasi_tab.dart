@@ -1,10 +1,12 @@
+import 'package:cookpad/favourite_provider.dart';
+import 'package:cookpad/recipe_detail_class.dart';
+import 'package:cookpad/widget/recipe_card.dart';
 import 'package:flutter/material.dart';
 import 'package:cookpad/page/detail_page.dart';
-import 'package:cookpad/recipe_class.dart';
-import 'package:cookpad/recipe_detail_class.dart';
 import 'package:cookpad/widget/button2custom.dart';
 import 'package:cookpad/widget/custom_choice_btn.dart';
-import 'package:cookpad/widget/recipe_item.dart';
+
+import 'package:provider/provider.dart';
 
 class SecondTab extends StatefulWidget {
   const SecondTab({Key? key}) : super(key: key);
@@ -16,13 +18,14 @@ class SecondTab extends StatefulWidget {
 class _SecondTabState extends State<SecondTab> {
   @override
   Widget build(BuildContext context) {
+    final favoriteProvider = Provider.of<FavouriteProvider>(context);
+
     return Scaffold(
       body: ListView(
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // row ke 1
               Padding(
                 padding: const EdgeInsets.only(top: 20, left: 25, bottom: 25),
                 child: Column(
@@ -36,8 +39,6 @@ class _SecondTabState extends State<SecondTab> {
                   ],
                 ),
               ),
-
-              // Bahan Makanan
               Container(
                 height: 35,
                 margin: const EdgeInsets.only(top: 8),
@@ -86,10 +87,6 @@ class _SecondTabState extends State<SecondTab> {
                   },
                 ),
               ),
-
-              // row ke 3
-
-              // row ke 4
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
@@ -99,15 +96,26 @@ class _SecondTabState extends State<SecondTab> {
               ),
               const SizedBox(height: 8),
               Container(
-                // height: 210,
-                width: MediaQuery.of(context).size.width,
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                child: Wrap(
-                  spacing: 16,
-                  runSpacing: 16,
-                  children: dataRecipe.map((recipe) {
-                    return RecipeItem(resep: recipe);
-                  }).toList(),
+                // width: MediaQuery.of(context).size.width,
+                padding: const EdgeInsets.all(16.0),
+                child: GridView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: dataRecipe.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 14 / 16,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                  ),
+                  itemBuilder: (context, index) {
+                    return RecipeCard(
+                      resep: dataRecipe[index],
+                      onFavoritePressed: () {
+                        favoriteProvider.addFavorite(dataRecipe[index]);
+                      },
+                    );
+                  },
                 ),
               ),
             ],

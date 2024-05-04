@@ -1,10 +1,17 @@
+import 'package:cookpad/favourite_provider.dart';
 import 'package:cookpad/main_page.dart';
 import 'package:cookpad/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => FavouriteProvider(),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
