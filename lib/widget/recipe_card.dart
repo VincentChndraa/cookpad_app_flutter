@@ -1,25 +1,34 @@
 import 'dart:ui';
 
+import 'package:cookpad/favourite_provider.dart';
 import 'package:cookpad/page/detail_page.dart';
 import 'package:cookpad/recipe_detail_class.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:provider/provider.dart';
 
-class RecipeCard extends StatelessWidget {
+class RecipeCard extends StatefulWidget {
   final Resep resep;
-  final VoidCallback? onFavoritePressed;
-  final VoidCallback? onRemovePressed;
+  // final VoidCallback? onFavoritePressed;
+  // final VoidCallback? onRemovePressed;
 
   const RecipeCard({
     Key? key,
     required this.resep,
-    this.onFavoritePressed,
-    this.onRemovePressed,
+    // this.onFavoritePressed,
+    // this.onRemovePressed,
   }) : super(key: key);
 
   @override
+  State<RecipeCard> createState() => _RecipeCardState();
+}
+
+class _RecipeCardState extends State<RecipeCard> {
+  @override
   Widget build(BuildContext context) {
+    final favoritesProvider = Provider.of<FavouriteProvider>(context);
+    bool isFavorite = favoritesProvider.favoriteResep.contains(widget.resep);
     return Material(
       elevation: 3,
       color: Colors.white,
@@ -31,7 +40,7 @@ class RecipeCard extends StatelessWidget {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => DetailResep(resep: resep)));
+                  builder: (context) => DetailResep(resep: widget.resep)));
         },
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,7 +51,7 @@ class RecipeCard extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage(resep.image), fit: BoxFit.cover),
+                      image: AssetImage(widget.resep.image), fit: BoxFit.cover),
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10))),
@@ -72,7 +81,7 @@ class RecipeCard extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 12.0),
               child: Text(
-                resep.judul,
+                widget.resep.judul,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
                 style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
@@ -89,7 +98,7 @@ class RecipeCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        resep.durasi,
+                        widget.resep.durasi,
                         style: TextStyle(
                           fontSize: 10,
                           color: Colors.grey.shade700,
@@ -107,16 +116,30 @@ class RecipeCard extends StatelessWidget {
                       // ),
                     ],
                   ),
-                  if (onFavoritePressed != null)
-                    IconButton(
-                      onPressed: onFavoritePressed,
-                      icon: const Icon(Icons.bookmark_outline),
+                  IconButton(
+                    onPressed: () {
+                      setState(() {
+                        int index = favoritesProvider.favoriteResep
+                            .indexOf(widget.resep);
+                        if (isFavorite) {
+                          // Remove the recipe from favorites
+                          favoritesProvider.removeFavorite(index);
+                        } else {
+                          // Add the recipe to favorites
+                          favoritesProvider.addFavorite(widget.resep);
+                        }
+                        isFavorite = !isFavorite;
+                      });
+                    },
+                    icon: Icon(
+                      isFavorite ? Icons.bookmark : Icons.bookmark_outline,
                     ),
-                  if (onRemovePressed != null)
-                    IconButton(
-                      onPressed: onRemovePressed,
-                      icon: const Icon(Icons.bookmark),
-                    ),
+                  ),
+                  // if (widget.onRemovePressed != null)
+                  //   IconButton(
+                  //     onPressed: widget.onRemovePressed,
+                  //     icon: const Icon(Icons.bookmark),
+                  //   ),
                 ],
               ),
             ),

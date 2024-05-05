@@ -38,9 +38,9 @@ class FavoriteScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return RecipeCard(
                     resep: favoritesProvider.favoriteResep[index],
-                    onRemovePressed: () {
-                      favoritesProvider.removeFavorite(index);
-                    },
+                    // onRemovePressed: () {
+                    //   favoritesProvider.removeFavorite(index);
+                    // },
                   );
                 },
               ),

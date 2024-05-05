@@ -111,9 +111,9 @@ class _SecondTabState extends State<SecondTab> {
                   itemBuilder: (context, index) {
                     return RecipeCard(
                       resep: dataRecipe[index],
-                      onFavoritePressed: () {
-                        favoriteProvider.addFavorite(dataRecipe[index]);
-                      },
+                      // onFavoritePressed: () {
+                      //   favoriteProvider.addFavorite(dataRecipe[index]);
+                      // },
                     );
                   },
                 ),

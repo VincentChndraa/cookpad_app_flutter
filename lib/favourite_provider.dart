@@ -12,7 +12,9 @@ class FavouriteProvider with ChangeNotifier {
   }
 
   void removeFavorite(int index) {
-    _favoriteResep.removeAt(index);
-    notifyListeners();
+    if (index >= 0 && index < _favoriteResep.length) {
+      _favoriteResep.removeAt(index);
+      notifyListeners();
+    }
   }
 }
