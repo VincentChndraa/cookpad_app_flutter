@@ -1,5 +1,6 @@
 import 'package:cookpad/recipe_detail_class.dart';
 import 'package:cookpad/widget/ingredients_tile.dart';
+import 'package:cookpad/widget/step_tile.dart';
 import 'package:flutter/material.dart';
 
 class DetailResep extends StatelessWidget {
@@ -91,16 +92,30 @@ class DetailResep extends StatelessWidget {
           ),
 
           // Section 4 - Deskripsi
-          Text(
-            "Langkah",
-            style: TextStyle(
-                color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
+          ListView.builder(
+            shrinkWrap: true,
+            padding: EdgeInsets.zero,
+            itemCount: resep.cara_memasak.split("\n").length,
+            physics: NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) {
+              if (index == 0) {
+                return Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  child: Text(
+                    "Langkah",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                );
+              } else {
+                String tutorial = resep.cara_memasak.split('\n')[index - 1];
+
+                return StepTile(tutorial: tutorial);
+              }
+            },
           ),
-          Text(
-            resep.cara_memasak,
-            style:
-                TextStyle(color: Colors.black, fontSize: 14, height: 150 / 100),
-          )
         ],
       ),
     );

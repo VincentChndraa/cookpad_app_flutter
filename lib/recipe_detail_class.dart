@@ -403,13 +403,12 @@ Bumbu ulek
 """,
     cara_memasak: """
 1. Siapkan semua bahan, Cuci bersih dan potong2 semua sayuran.
-Ulek bumbu sampai halus, sisihkan
-2. Didihkan air, masukkan bumbu ulek, laos, daun salam dan asam
-3. Biarkan beberapa menit supaya bumbu matang dan bau langu hilang.
-   Masukkan kacang tanah
-4. Berturut-turut masukkan sayuran dari yang paling keras (jagung, biji melinjo dan pepaya mentah) sampai terakhir daun melinjo.
-   Tambahkan gula garam sesuai selera
-5. Taraa, cocok Maak buat makan siang2 
+2. Ulek bumbu sampai halus, sisihkan
+3. Didihkan air, masukkan bumbu ulek, laos, daun salam dan asam
+4. Biarkan beberapa menit supaya bumbu matang dan bau langu hilang.
+5. Masukkan kacang tanah
+6. Berturut-turut masukkan sayuran dari yang paling keras (jagung, biji melinjo dan pepaya mentah) sampai terakhir daun melinjo.Tambahkan gula garam sesuai selera
+7. Taraa, cocok Maak buat makan siang2 
     """,
   ),
 ];

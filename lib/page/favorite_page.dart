@@ -12,7 +12,7 @@ class FavoriteScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Favorit"),
+        title: Text("Tersimpan"),
       ),
       body: favoritesProvider.favoriteResep.isEmpty
           ? const Center(

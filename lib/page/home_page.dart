@@ -13,7 +13,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // final _searchQueryController = TextEditingController();
   List<Resep> resep = dataRecipe;
   @override
   Widget build(BuildContext context) {
@@ -47,25 +46,16 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-
           actions: [
             Padding(
               padding: EdgeInsets.only(right: 10),
               child: IconButton(
-                icon: Icon(Icons.notifications),
+                icon: Icon(Icons.chat_bubble_rounded),
                 tooltip: "Notifications",
                 onPressed: () {},
               ),
             )
           ],
-          // bottom: TabBar(
-          //   indicatorColor: Color.fromRGBO(241, 158, 75, 1),
-          //   indicatorWeight: 4,
-          //   tabs: [
-          //     Tab(text: "Mengikuti"),
-          //     Tab(text: "Inspirasi"),
-          //   ],
-          // ),
         ),
         body: Column(
           children: [

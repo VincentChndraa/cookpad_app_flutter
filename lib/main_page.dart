@@ -1,5 +1,6 @@
 import 'package:cookpad/page/favorite_page.dart';
 import 'package:cookpad/page/home_page.dart';
+import 'package:cookpad/page/profile_page.dart';
 import 'package:cookpad/page/search_page.dart';
 import 'package:cookpad/recipe_detail_class.dart';
 import 'package:cookpad/widget/textfield_custom.dart';
@@ -17,14 +18,6 @@ class BottomNavigation extends StatefulWidget {
 class _BottomNavigationState extends State<BottomNavigation> {
   int _currentIndex = 0;
 
-  final List<Widget> screens = [
-    HomeScreen(),
-    SearchPage(),
-    Center(child: Text('add')),
-    FavoriteScreen(),
-    Center(child: Text('profile')),
-  ];
-
   void onTabTapped(int index) {
     setState(() {
       _currentIndex = index;
@@ -35,20 +28,42 @@ class _BottomNavigationState extends State<BottomNavigation> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _buildBody(),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _currentIndex,
-        onDestinationSelected: (index) =>
-            setState(() => this._currentIndex = index),
-        // indicatorColor: Colors.amber,
-        // showSelectedLabels: true,
-        // showUnselectedLabels: true,
-        destinations: [
-          NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-          NavigationDestination(icon: Icon(Icons.search), label: "search"),
-          NavigationDestination(icon: Icon(Icons.add_a_photo), label: "add"),
-          NavigationDestination(icon: Icon(Icons.payment), label: "payment"),
-          NavigationDestination(icon: Icon(Icons.person), label: "profile"),
-        ],
+      bottomNavigationBar: Container(
+        height: 60,
+        child: NavigationBar(
+          backgroundColor: Colors.white70,
+          selectedIndex: _currentIndex,
+          onDestinationSelected: (index) =>
+              setState(() => this._currentIndex = index),
+          // indicatorColor: Colors.white,
+          destinations: [
+            NavigationDestination(
+              icon: Icon(Icons.home_outlined),
+              label: '',
+              selectedIcon:
+                  Icon(Icons.home_outlined, color: Colors.amber.shade800),
+            ),
+            NavigationDestination(
+                icon: Icon(Icons.search),
+                label: '',
+                selectedIcon: Icon(Icons.search, color: Colors.amber.shade800)),
+            NavigationDestination(
+                icon: Icon(Icons.add_box_outlined),
+                label: '',
+                selectedIcon:
+                    Icon(Icons.add_box_outlined, color: Colors.amber.shade800)),
+            NavigationDestination(
+                icon: Icon(Icons.workspace_premium_outlined),
+                label: '',
+                selectedIcon: Icon(Icons.workspace_premium_outlined,
+                    color: Colors.amber.shade800)),
+            NavigationDestination(
+                icon: Icon(Icons.person_2_outlined),
+                label: '',
+                selectedIcon: Icon(Icons.person_2_outlined,
+                    color: Colors.amber.shade800)),
+          ],
+        ),
       ),
     );
   }
@@ -62,9 +77,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
       case 2:
         return Center(child: Text('add'));
       case 3:
-        return FavoriteScreen();
+        return Center(child: Text('Premium'));
       case 4:
-        return Center(child: Text("Payment"));
+        return ProfileScreen();
       default:
         return Container();
     }
