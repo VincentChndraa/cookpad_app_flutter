@@ -44,5 +44,65 @@ List<ListUser> UserData = [
       "Tauco Puyuh Campur",
       "Donat simpel no mixer"
     ],
-  )
+  ),
+  ListUser(
+    name: "Amanda Johnson",
+    username: "@amanda_johnson",
+    jumlah_resep: "10 resep",
+    jumlah_cooksnap: "20 cooksnap",
+    gambar_makanan: [
+      "assets/images/daging_ayam.jpg",
+      "assets/images/beef_bibimbap_recipe.jpeg",
+      "assets/images/masak_ayam.jpg"
+    ],
+    nama_makanan: ["Nasi Goreng", "Ayam Bakar", "Pisang Goreng"],
+  ),
+  ListUser(
+    name: "Michael Smith",
+    username: "@michael_smith",
+    jumlah_resep: "15 resep",
+    jumlah_cooksnap: "50 cooksnap",
+    gambar_makanan: [
+      "assets/images/daging_ayam.jpg",
+      "assets/images/beef_bibimbap_recipe.jpeg",
+      "assets/images/masak_ayam.jpg"
+    ],
+    nama_makanan: ["Sate Ayam", "Rendang Daging", "Sop Buntut"],
+  ),
+  ListUser(
+    name: "Sophie Brown",
+    username: "@sophie_brown",
+    jumlah_resep: "8 resep",
+    jumlah_cooksnap: "35 cooksnap",
+    gambar_makanan: [
+      "assets/images/daging_ayam.jpg",
+      "assets/images/beef_bibimbap_recipe.jpeg",
+      "assets/images/masak_ayam.jpg"
+    ],
+    nama_makanan: ["Pecel Lele", "Kue Lumpur", "Sambal Goreng Ati"],
+  ),
+  ListUser(
+    name: "John Anderson",
+    username: "@john_anderson",
+    jumlah_resep: "12 resep",
+    jumlah_cooksnap: "42 cooksnap",
+    gambar_makanan: [
+      "assets/images/daging_ayam.jpg",
+      "assets/images/beef_bibimbap_recipe.jpeg",
+      "assets/images/masak_ayam.jpg"
+    ],
+    nama_makanan: ["Es Krim", "Martabak", "Tahu Bulat"],
+  ),
+  ListUser(
+    name: "Emily Taylor",
+    username: "@emily_taylor",
+    jumlah_resep: "20 resep",
+    jumlah_cooksnap: "60 cooksnap",
+    gambar_makanan: [
+      "assets/images/daging_ayam.jpg",
+      "assets/images/beef_bibimbap_recipe.jpeg",
+      "assets/images/masak_ayam.jpg"
+    ],
+    nama_makanan: ["Gado-Gado", "Nasi Kuning", "Ayam Goreng"],
+  ),
 ];
