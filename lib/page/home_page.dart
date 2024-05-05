@@ -143,8 +143,6 @@ class MySearchDelegate extends SearchDelegate {
                 builder: (context) => DetailResep(resep: suggestion),
               ),
             );
-
-            showResults(context);
           },
         );
       },

@@ -21,29 +21,31 @@ class FavoriteScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.black),
               ),
             )
-          : Container(
+          : ListView(
               // width: MediaQuery.of(context).size.width,
               padding: const EdgeInsets.all(16.0),
-              child: GridView.builder(
-                // padding: const EdgeInsets.symmetric(horizontal: 25),
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: favoritesProvider.favoriteResep.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio: 14 / 16,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
+              children: [
+                GridView.builder(
+                  // padding: const EdgeInsets.symmetric(horizontal: 25),
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: favoritesProvider.favoriteResep.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 9 / 16,
+                    mainAxisSpacing: 5,
+                    crossAxisSpacing: 10,
+                  ),
+                  itemBuilder: (context, index) {
+                    return RecipeCard(
+                      resep: favoritesProvider.favoriteResep[index],
+                      // onRemovePressed: () {
+                      //   favoritesProvider.removeFavorite(index);
+                      // },
+                    );
+                  },
                 ),
-                itemBuilder: (context, index) {
-                  return RecipeCard(
-                    resep: favoritesProvider.favoriteResep[index],
-                    // onRemovePressed: () {
-                    //   favoritesProvider.removeFavorite(index);
-                    // },
-                  );
-                },
-              ),
+              ],
             ),
     );
   }

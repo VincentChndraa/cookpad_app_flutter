@@ -6,7 +6,9 @@ class Resep {
   String bahan2;
   String cara_memasak;
   String durasi;
-  bool isFavorite;
+  String nama_user;
+  String user_name;
+  String kota_asal;
 
   Resep({
     required this.id,
@@ -16,7 +18,9 @@ class Resep {
     required this.cara_memasak,
     required this.bahan2,
     required this.durasi,
-    this.isFavorite = false,
+    required this.nama_user,
+    required this.user_name,
+    required this.kota_asal,
   });
 }
 
@@ -70,6 +74,9 @@ Secukupnya garam dan kaldu
 3. Siapkan pelengkapnya.
 4. Ambil mangkok, tata nasi, tauge, kol, perkedel, tomat dan daun bawang serta suiran ayam. Lalu siram dengan kuah sotonya. Beri taburan bawang goreng. Sajikan disertai perasan jeruk dan taburan bawang goreng juga sambal.
 """,
+    nama_user: "Arum Kusuma",
+    user_name: "@Arum_Kusuma",
+    kota_asal: "Bekasi, Jawa Barat, Indonesia",
   ),
   //2.Opor Ayam//
   Resep(
@@ -108,6 +115,9 @@ Bumbu penyedap : garam, kaldu ayam / msg, gula merah
 4. Kemudian setelah bumbu matang, masukkan ayam yang sudah dipresto, aduk2 sebentar. Lalu tambahkan santan dan air kaldu sisa merebus ayam tadi.
 5. Tambahkan bumbu penyedap. Masak sampai kuah matang (cirinya keluar minyak). Koreksi rasa. Angkat dan sajikan.
 """,
+    nama_user: "Nani Wahyuni Hwang",
+    user_name: "@nanihwang",
+    kota_asal: "Purbalingga",
   ),
   //3.Nasi Liwet//
   Resep(
@@ -137,6 +147,9 @@ Kaldu bubuk secukupnya
 4. Tutup dengan daun pisang kemudian tutup lagi dengan tutup kuali. Masak dengan api kecil hingga matang.
 5. Setelah matang sajikan bersama dengan lauk pendamping
     """,
+    nama_user: "Michelle Putri",
+    user_name: "@michelleputri",
+    kota_asal: "Jakarta",
   ),
   //4.Beef Bibimbap//
   Resep(
@@ -176,6 +189,9 @@ Garam secukupnya
 4. Untuk saus bibimbapnya Masukan sekitar 1sdm minyak wijen campur dengan 3sdm gochujang, 1 sdm air dan gula, garam. Check rasa hingga pas.
 5. Lalu campur nasi putih dengan semua sayuran dan daging tadi, juga telur ceploknya, dan juga saus bibimbapnya. Lalu di aduk rata sampai semuanya tercampur dan taburi dengan biji Wijen. Maka siap di nikmati.
     """,
+    nama_user: "David Tan",
+    user_name: "@davidtan",
+    kota_asal: "Yogyakarta",
   ),
   //5. Salmon Teriyaki//
   Resep(
@@ -209,6 +225,9 @@ Sejumput nori bubuk
 6. Letakkan di atas nasi kembang kol. Beri topping wijen sangrai dan nori bubuk.
 7. Sajikan selagi hangat.
     """,
+    nama_user: "Eva Liana",
+    user_name: "@evaliana",
+    kota_asal: "Semarang",
   ),
   //6. Crispy Chicken Skin with salted egg sauce//
   Resep(
@@ -243,6 +262,9 @@ Penyedap
 5. Tambahkan garam dan penyedap kemudian cek rasa.
 6. Terakhir, masukkan kulit ayam yang sudah digoreng, kemudian aduk hingga saus telur asin melapisi seluruh bagian kulit ayam.
     """,
+    nama_user: "Alexandra Wang",
+    user_name: "@alexandrawang",
+    kota_asal: "Malang",
   ),
   //7.  Ayam Betutu Khas Bali//
   Resep(
@@ -293,6 +315,9 @@ Minyak panas secukupnya
 4. Sembari menunggu ayam direbus, cincang semua bahan sambal matah dan campur dengan garam, cuka dan terasi jangan lupa beri sedikit minyak panas.
 5. Jika air sudah surut dan bumbu menyerap, makan ayam betutu siap dihidangkan
     """,
+    nama_user: "Dennis Kurniawan",
+    user_name: "@denniskurniawan",
+    kota_asal: "Bali",
   ),
   //8. Babi Panggang Karo//
   Resep(
@@ -329,6 +354,9 @@ Secukupnya kaldu jamur
 4. Untuk sambel karo blender smua bumbu (kecuali darah) lalu masak darah dengan api kecil dengan bumbu blender hingga mendidih.
 5. Setelah bumbu matang , sajikan bersama daging babi yang ada.
     """,
+    nama_user: "Bryan Fernandez",
+    user_name: "@bryanfernandez",
+    kota_asal: "Medan",
   ),
   //9. Gurame Asam Manis//
   Resep(
@@ -371,6 +399,9 @@ Secukupnya air dingin
 6. Terakhir masukan larutan maizena untuk pengentalnya. Cek rasa
 7. Siapkan piring saji, taruh ikan kemudian siram dengan saos asam manisnya. Sajikan
     """,
+    nama_user: "Cindy Lee",
+    user_name: "@cindylee",
+    kota_asal: "Manado",
   ),
   //10. Sayur Asem//
   Resep(
@@ -410,6 +441,9 @@ Bumbu ulek
 6. Berturut-turut masukkan sayuran dari yang paling keras (jagung, biji melinjo dan pepaya mentah) sampai terakhir daun melinjo.Tambahkan gula garam sesuai selera
 7. Taraa, cocok Maak buat makan siang2 
     """,
+    nama_user: "Rina",
+    user_name: "@rinaWooy_96",
+    kota_asal: "Surabaya",
   ),
 ];
 

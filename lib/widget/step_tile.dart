@@ -21,17 +21,16 @@ class StepTile extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            padding: EdgeInsets.all(6),
+            padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               shape: BoxShape.circle, // Bentuk bulat
-              color: Colors.red, // Ganti dengan warna angka
+              color: Colors.grey[800], // Ganti dengan warna angka
             ),
             child: Text(
               number,
               style: TextStyle(
                 color: Colors.white, // Ganti dengan warna teks angka
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
+                fontSize: 12,
               ),
             ),
           ),

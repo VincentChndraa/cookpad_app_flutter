@@ -44,20 +44,50 @@ class _RecipeCardState extends State<RecipeCard> {
         },
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             // Section 1 - Gambar
-            Container(
-              height: 140,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(widget.resep.image), fit: BoxFit.cover),
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      topRight: Radius.circular(10))),
+            Stack(
+              children: [
+                Container(
+                  height: 140,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(widget.resep.image),
+                          fit: BoxFit.cover),
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10))),
+                ),
+                Positioned(
+                  top: 2,
+                  right: 2,
+                  child: IconButton(
+                    onPressed: () {
+                      setState(() {
+                        int index = favoritesProvider.favoriteResep
+                            .indexOf(widget.resep);
+                        if (isFavorite) {
+                          // Remove the recipe from favorites
+                          favoritesProvider.removeFavorite(index);
+                        } else {
+                          // Add the recipe to favorites
+                          favoritesProvider.addFavorite(widget.resep);
+                        }
+                        isFavorite = !isFavorite;
+                      });
+                    },
+                    icon: Icon(
+                      isFavorite ? Icons.bookmark : Icons.bookmark_outline,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
             ),
 
-            const SizedBox(height: 8),
+            const SizedBox(height: 7),
 
             // Section 2 - Informasi User
             Padding(
@@ -69,13 +99,13 @@ class _RecipeCardState extends State<RecipeCard> {
                   ),
                   SizedBox(width: 5),
                   Text(
-                    "Vincent",
+                    widget.resep.nama_user,
                     style: TextStyle(fontSize: 10),
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 5),
+            const SizedBox(height: 3),
 
             // Section 3 - Judul Resep
             Padding(
@@ -87,7 +117,7 @@ class _RecipeCardState extends State<RecipeCard> {
                 style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
               ),
             ),
-            const SizedBox(height: 5),
+            const SizedBox(height: 15),
 
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 12.0),
@@ -116,25 +146,25 @@ class _RecipeCardState extends State<RecipeCard> {
                       // ),
                     ],
                   ),
-                  IconButton(
-                    onPressed: () {
-                      setState(() {
-                        int index = favoritesProvider.favoriteResep
-                            .indexOf(widget.resep);
-                        if (isFavorite) {
-                          // Remove the recipe from favorites
-                          favoritesProvider.removeFavorite(index);
-                        } else {
-                          // Add the recipe to favorites
-                          favoritesProvider.addFavorite(widget.resep);
-                        }
-                        isFavorite = !isFavorite;
-                      });
-                    },
-                    icon: Icon(
-                      isFavorite ? Icons.bookmark : Icons.bookmark_outline,
-                    ),
-                  ),
+                  // IconButton(
+                  //   onPressed: () {
+                  //     setState(() {
+                  //       int index = favoritesProvider.favoriteResep
+                  //           .indexOf(widget.resep);
+                  //       if (isFavorite) {
+                  //         // Remove the recipe from favorites
+                  //         favoritesProvider.removeFavorite(index);
+                  //       } else {
+                  //         // Add the recipe to favorites
+                  //         favoritesProvider.addFavorite(widget.resep);
+                  //       }
+                  //       isFavorite = !isFavorite;
+                  //     });
+                  //   },
+                  //   icon: Icon(
+                  //     isFavorite ? Icons.bookmark : Icons.bookmark_outline,
+                  //   ),
+                  // ),
                   // if (widget.onRemovePressed != null)
                   //   IconButton(
                   //     onPressed: widget.onRemovePressed,
@@ -143,9 +173,11 @@ class _RecipeCardState extends State<RecipeCard> {
                 ],
               ),
             ),
+            const SizedBox(height: 5),
 
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 12.0, vertical: 5.0),
               child: Row(
                 children: [
                   Container(

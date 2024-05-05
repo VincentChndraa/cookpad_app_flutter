@@ -104,7 +104,7 @@ class _SecondTabState extends State<SecondTab> {
                   itemCount: dataRecipe.length,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    childAspectRatio: 14 / 16,
+                    childAspectRatio: 10 / 16,
                     mainAxisSpacing: 10,
                     crossAxisSpacing: 10,
                   ),
