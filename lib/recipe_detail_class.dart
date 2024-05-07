@@ -452,43 +452,43 @@ var ingredientsItems = [
     "name": "Ayam",
   },
   {
-    "image": "assets/images/daging_ayam.jpg",
+    "image": "assets/images/sawi_putih.jpeg",
     "name": "Sawi Putih",
   },
   {
-    "image": "assets/images/daging_ayam.jpg",
+    "image": "assets/images/buncis.jpg",
     "name": "Buncis",
   },
   {
-    "image": "assets/images/daging_ayam.jpg",
+    "image": "assets/images/tahu.jpeg",
     "name": "Tahu",
   },
   {
-    "image": "assets/images/daging_ayam.jpg",
+    "image": "assets/images/labu_siam.jpeg",
     "name": "Labu Siam",
   },
   {
-    "image": "assets/images/daging_ayam.jpg",
+    "image": "assets/images/daging_sapi.jpeg",
     "name": "Sapi",
   },
   {
-    "image": "assets/images/daging_ayam.jpg",
+    "image": "assets/images/telur.jpg",
     "name": "Telur",
   },
   {
-    "image": "assets/images/daging_ayam.jpg",
+    "image": "assets/images/santan.jpeg",
     "name": "Santan",
   },
   {
-    "image": "assets/images/daging_ayam.jpg",
+    "image": "assets/images/kol.jpg",
     "name": "Kol",
   },
   {
-    "image": "assets/images/daging_ayam.jpg",
+    "image": "assets/images/cabai.jpeg",
     "name": "Cabai",
   },
   {
-    "image": "assets/images/daging_ayam.jpg",
+    "image": "assets/images/tepung.jpg",
     "name": "Tepung Terigu",
   }
 ];

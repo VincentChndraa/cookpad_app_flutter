@@ -14,7 +14,10 @@ class Button2Custom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.white),
+        color: Colors.white,
+      ),
       width: 310,
       height: 40,
       child: ElevatedButton(

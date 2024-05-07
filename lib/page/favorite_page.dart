@@ -12,6 +12,7 @@ class FavoriteScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFFF8F6F2),
         title: Text(
           "Tersimpan",
           style: TextStyle(
@@ -20,6 +21,7 @@ class FavoriteScreen extends StatelessWidget {
           ),
         ),
       ),
+      backgroundColor: Color(0xFFF8F6F2),
       body: favoritesProvider.favoriteResep.isEmpty
           ? const Center(
               child: Column(

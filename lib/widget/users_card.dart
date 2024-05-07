@@ -30,114 +30,117 @@ class _UsersCardState extends State<UsersCard> {
       ),
       child: InkWell(
         onTap: () {},
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Section 1
-            Padding(
-              padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
-              child: Row(
-                children: [
-                  CircleAvatar(),
-                  SizedBox(width: 20),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        widget.listuser.name,
-                        style: TextStyle(
-                          fontWeight: FontWeight.w900,
-                          fontSize: 11,
+        child: Container(
+          width: 310,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Section 1
+              Padding(
+                padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
+                child: Row(
+                  children: [
+                    CircleAvatar(),
+                    SizedBox(width: 20),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          widget.listuser.name,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 11,
+                          ),
                         ),
-                      ),
-                      Text(
-                        widget.listuser.username,
-                        style: TextStyle(fontSize: 10),
-                      ),
-                      SizedBox(height: 3),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.food_bank_outlined,
-                            size: 15,
-                          ),
-                          SizedBox(width: 2),
-                          Text(
-                            widget.listuser.jumlah_resep,
-                            style: TextStyle(fontSize: 10),
-                          ),
-                          SizedBox(width: 2),
-                          Icon(Icons.photo_camera_outlined, size: 15),
-                          SizedBox(width: 2),
-                          Text(
-                            widget.listuser.jumlah_cooksnap,
-                            style: TextStyle(fontSize: 10),
-                          )
-                        ],
-                      )
-                    ],
-                  )
-                ],
+                        Text(
+                          widget.listuser.username,
+                          style: TextStyle(fontSize: 10),
+                        ),
+                        SizedBox(height: 3),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.food_bank_outlined,
+                              size: 15,
+                            ),
+                            SizedBox(width: 2),
+                            Text(
+                              widget.listuser.jumlah_resep,
+                              style: TextStyle(fontSize: 10),
+                            ),
+                            SizedBox(width: 2),
+                            Icon(Icons.photo_camera_outlined, size: 15),
+                            SizedBox(width: 2),
+                            Text(
+                              widget.listuser.jumlah_cooksnap,
+                              style: TextStyle(fontSize: 10),
+                            )
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                ),
               ),
-            ),
-            const SizedBox(height: 2),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  ConstrainedBox(
-                    constraints: BoxConstraints(
-                      maxHeight: 90,
+              const SizedBox(height: 2),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxHeight: 90,
+                      ),
+                      child: PictureCard(
+                        imageUrl: widget.listuser.gambar_makanan[0],
+                        title: widget.listuser.nama_makanan[0],
+                      ),
                     ),
-                    child: PictureCard(
-                      imageUrl: widget.listuser.gambar_makanan[0],
-                      title: widget.listuser.nama_makanan[0],
+                    const SizedBox(width: 10),
+                    ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxHeight: 90,
+                      ),
+                      child: PictureCard(
+                        imageUrl: widget.listuser.gambar_makanan[1],
+                        title: widget.listuser.nama_makanan[1],
+                      ),
                     ),
-                  ),
-                  const SizedBox(width: 10),
-                  ConstrainedBox(
-                    constraints: BoxConstraints(
-                      maxHeight: 90,
+                    const SizedBox(width: 10),
+                    ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxHeight: 90,
+                      ),
+                      child: PictureCard(
+                        imageUrl: widget.listuser.gambar_makanan[2],
+                        title: widget.listuser.nama_makanan[2],
+                      ),
                     ),
-                    child: PictureCard(
-                      imageUrl: widget.listuser.gambar_makanan[1],
-                      title: widget.listuser.nama_makanan[1],
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  ConstrainedBox(
-                    constraints: BoxConstraints(
-                      maxHeight: 90,
-                    ),
-                    child: PictureCard(
-                      imageUrl: widget.listuser.gambar_makanan[2],
-                      title: widget.listuser.nama_makanan[2],
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Center(
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width / 1.24,
-                  height: 30,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text("Ikuti"),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.grey.shade700,
-                      foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(6.0),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width / 1.24,
+                    height: 30,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text("Ikuti"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey.shade700,
+                        foregroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6.0),
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );

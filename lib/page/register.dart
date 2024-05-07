@@ -30,7 +30,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     String password = _passwordController.text;
     String confirmPassword = _confirmPasswordController.text;
 
-    if (username == "emma" &&
+    if (username == "emma_beau" &&
         email == "emma@gmail.com" &&
         password == "emma123" &&
         confirmPassword == "emma123") {
