@@ -23,11 +23,11 @@ List<ListUser> UserData = [
     jumlah_resep: "53 resep",
     jumlah_cooksnap: "30 cooksnap",
     gambar_makanan: [
-      "assets/images/daging_ayam.jpg",
-      "assets/images/beef_bibimbap_recipe.jpeg",
-      "assets/images/masak_ayam.jpg"
+      "assets/images/nasi_bakar.jpeg",
+      "assets/images/kulit_risoles.jpg",
+      "assets/images/steam_chicken_curry.jpg"
     ],
-    nama_makanan: ["Kulit risoles", "Kulit risoles", "Kulit risoles"],
+    nama_makanan: ["Nasi Bakar", "Kulit risoles", "Steam Chicken Curry"],
   ),
   ListUser(
     name: 'Feyra Yuniar',
@@ -35,9 +35,9 @@ List<ListUser> UserData = [
     jumlah_resep: "4 resep",
     jumlah_cooksnap: "149 cooksnap",
     gambar_makanan: [
-      "assets/images/daging_ayam.jpg",
-      "assets/images/beef_bibimbap_recipe.jpeg",
-      "assets/images/masak_ayam.jpg"
+      "assets/images/mie_jagung_goreng.jpg",
+      "assets/images/tauco_puyuh_campur.jpg",
+      "assets/images/donat_simpel.jpg"
     ],
     nama_makanan: [
       "Mie jagung goreng",
@@ -51,9 +51,9 @@ List<ListUser> UserData = [
     jumlah_resep: "10 resep",
     jumlah_cooksnap: "20 cooksnap",
     gambar_makanan: [
-      "assets/images/daging_ayam.jpg",
-      "assets/images/beef_bibimbap_recipe.jpeg",
-      "assets/images/masak_ayam.jpg"
+      "assets/images/nasi_goreng.jpg",
+      "assets/images/ayam_bakar.jpg",
+      "assets/images/pisang_goreng.jpg"
     ],
     nama_makanan: ["Nasi Goreng", "Ayam Bakar", "Pisang Goreng"],
   ),
@@ -63,9 +63,9 @@ List<ListUser> UserData = [
     jumlah_resep: "15 resep",
     jumlah_cooksnap: "50 cooksnap",
     gambar_makanan: [
-      "assets/images/daging_ayam.jpg",
-      "assets/images/beef_bibimbap_recipe.jpeg",
-      "assets/images/masak_ayam.jpg"
+      "assets/images/sate_ayam.jpg",
+      "assets/images/rendang_daging.jpg",
+      "assets/images/sop_buntut.jpg"
     ],
     nama_makanan: ["Sate Ayam", "Rendang Daging", "Sop Buntut"],
   ),
@@ -75,9 +75,9 @@ List<ListUser> UserData = [
     jumlah_resep: "8 resep",
     jumlah_cooksnap: "35 cooksnap",
     gambar_makanan: [
-      "assets/images/daging_ayam.jpg",
-      "assets/images/beef_bibimbap_recipe.jpeg",
-      "assets/images/masak_ayam.jpg"
+      "assets/images/pecel_lele.jpg",
+      "assets/images/kue_lumpur.jpg",
+      "assets/images/sambal_goreng_Ati.jpeg"
     ],
     nama_makanan: ["Pecel Lele", "Kue Lumpur", "Sambal Goreng Ati"],
   ),
@@ -87,9 +87,9 @@ List<ListUser> UserData = [
     jumlah_resep: "12 resep",
     jumlah_cooksnap: "42 cooksnap",
     gambar_makanan: [
-      "assets/images/daging_ayam.jpg",
-      "assets/images/beef_bibimbap_recipe.jpeg",
-      "assets/images/masak_ayam.jpg"
+      "assets/images/es_krim.jpeg",
+      "assets/images/martabak.jpg",
+      "assets/images/tahu_bulat.jpg"
     ],
     nama_makanan: ["Es Krim", "Martabak", "Tahu Bulat"],
   ),
@@ -99,9 +99,9 @@ List<ListUser> UserData = [
     jumlah_resep: "20 resep",
     jumlah_cooksnap: "60 cooksnap",
     gambar_makanan: [
-      "assets/images/daging_ayam.jpg",
-      "assets/images/beef_bibimbap_recipe.jpeg",
-      "assets/images/masak_ayam.jpg"
+      "assets/images/gado_gado.jpeg",
+      "assets/images/nasi_kuning.jpeg",
+      "assets/images/ayam_goreng.jpg"
     ],
     nama_makanan: ["Gado-Gado", "Nasi Kuning", "Ayam Goreng"],
   ),

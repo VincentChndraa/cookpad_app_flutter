@@ -29,13 +29,34 @@ class _LoginScreenState extends State<LoginScreen> {
     String email = _emailController.text;
     String password = _passwordController.text;
 
-    if (email == "admin" && password == "password") {
+    if (email.isEmpty || password.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Mohon isi email dan password.'),
+        ),
+      );
+      return;
+    }
+
+    if (email == "emma@gmail.com" && password == "emma123") {
       Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(builder: (_) => BottomNavigation()),
           (route) => false);
     } else {
-      print("Login Gagal");
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('Login Gagal'),
+          content: Text('Mohon periksa kembali email dan password Anda.'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text('Tutup'),
+            ),
+          ],
+        ),
+      );
     }
   }
 

@@ -30,10 +30,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
     String password = _passwordController.text;
     String confirmPassword = _confirmPasswordController.text;
 
-    if (username == "test" &&
-        email == "test@gmail.com" &&
-        password == "test123" &&
-        confirmPassword == "test123") {
+    if (username == "emma" &&
+        email == "emma@gmail.com" &&
+        password == "emma123" &&
+        confirmPassword == "emma123") {
       Navigator.pushAndRemoveUntil(context,
           MaterialPageRoute(builder: (_) => LoginScreen()), (route) => false);
     } else {
@@ -44,7 +44,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Color(0xFFF8F6F2),
+      ),
       backgroundColor: Color(0xFFF8F6F2),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -60,14 +62,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Text(
                       "Daftar dengan Email",
                       style: TextStyle(
-                        color: Color.fromARGB(74, 74, 74, 1),
+                        color: Colors.grey.shade800,
                         fontWeight: FontWeight.w900,
                         fontSize: 27.0,
                       ),
                     ),
                     SizedBox(height: 10),
                     Text(
-                      "silahkan masukkan username, email dan kata sandi",
+                      "Silahkan masukkan username, email dan kata sandi",
                       style: TextStyle(
                           fontSize: 16.0, color: Color.fromRGBO(74, 74, 74, 1)),
                     )
@@ -103,7 +105,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         hint: "Konfirmasi Kata Sandi",
                         icon: Icons.lock_outline,
                       ),
-                      const SizedBox(height: 5)
+                      const SizedBox(height: 10)
                     ],
                   ),
                 ),

@@ -23,7 +23,7 @@ class _UsersCardState extends State<UsersCard> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      elevation: 3,
+      elevation: 5,
       color: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
@@ -33,6 +33,7 @@ class _UsersCardState extends State<UsersCard> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Section 1
             Padding(
               padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
               child: Row(
@@ -57,7 +58,7 @@ class _UsersCardState extends State<UsersCard> {
                       Row(
                         children: [
                           Icon(
-                            Icons.kitchen_outlined,
+                            Icons.food_bank_outlined,
                             size: 15,
                           ),
                           SizedBox(width: 2),
@@ -66,7 +67,7 @@ class _UsersCardState extends State<UsersCard> {
                             style: TextStyle(fontSize: 10),
                           ),
                           SizedBox(width: 2),
-                          Icon(Icons.snapchat_outlined, size: 15),
+                          Icon(Icons.photo_camera_outlined, size: 15),
                           SizedBox(width: 2),
                           Text(
                             widget.listuser.jumlah_cooksnap,
@@ -86,8 +87,7 @@ class _UsersCardState extends State<UsersCard> {
                 children: [
                   ConstrainedBox(
                     constraints: BoxConstraints(
-                      maxHeight: 90, // Set maximum height to 100
-                      maxWidth: 90, // Set maximum width to 100
+                      maxHeight: 90,
                     ),
                     child: PictureCard(
                       imageUrl: widget.listuser.gambar_makanan[0],
@@ -97,8 +97,7 @@ class _UsersCardState extends State<UsersCard> {
                   const SizedBox(width: 10),
                   ConstrainedBox(
                     constraints: BoxConstraints(
-                      maxHeight: 90, // Set maximum height to 130
-                      maxWidth: 90, // Set maximum width to 100
+                      maxHeight: 90,
                     ),
                     child: PictureCard(
                       imageUrl: widget.listuser.gambar_makanan[1],
@@ -108,8 +107,7 @@ class _UsersCardState extends State<UsersCard> {
                   const SizedBox(width: 10),
                   ConstrainedBox(
                     constraints: BoxConstraints(
-                      maxHeight: 90, // Set maximum height to 100
-                      maxWidth: 90, // Set maximum width to 100
+                      maxHeight: 90,
                     ),
                     child: PictureCard(
                       imageUrl: widget.listuser.gambar_makanan[2],
@@ -123,7 +121,7 @@ class _UsersCardState extends State<UsersCard> {
               padding: const EdgeInsets.all(8.0),
               child: Center(
                 child: SizedBox(
-                  width: MediaQuery.of(context).size.width / 1.73,
+                  width: MediaQuery.of(context).size.width / 1.24,
                   height: 30,
                   child: ElevatedButton(
                     onPressed: () {},

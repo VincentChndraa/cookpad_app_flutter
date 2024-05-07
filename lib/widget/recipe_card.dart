@@ -10,14 +10,10 @@ import 'package:provider/provider.dart';
 
 class RecipeCard extends StatefulWidget {
   final Resep resep;
-  // final VoidCallback? onFavoritePressed;
-  // final VoidCallback? onRemovePressed;
 
   const RecipeCard({
     Key? key,
     required this.resep,
-    // this.onFavoritePressed,
-    // this.onRemovePressed,
   }) : super(key: key);
 
   @override
@@ -121,56 +117,13 @@ class _RecipeCardState extends State<RecipeCard> {
 
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 12.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        widget.resep.durasi,
-                        style: TextStyle(
-                          fontSize: 10,
-                          color: Colors.grey.shade700,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(width: 5),
-                      // Text(
-                      //   "\$12.00",
-                      //   style: TextStyle(
-                      //     fontSize: 15,
-                      //     color: Colors.grey.shade700,
-                      //     fontWeight: FontWeight.bold,
-                      //   ),
-                      // ),
-                    ],
-                  ),
-                  // IconButton(
-                  //   onPressed: () {
-                  //     setState(() {
-                  //       int index = favoritesProvider.favoriteResep
-                  //           .indexOf(widget.resep);
-                  //       if (isFavorite) {
-                  //         // Remove the recipe from favorites
-                  //         favoritesProvider.removeFavorite(index);
-                  //       } else {
-                  //         // Add the recipe to favorites
-                  //         favoritesProvider.addFavorite(widget.resep);
-                  //       }
-                  //       isFavorite = !isFavorite;
-                  //     });
-                  //   },
-                  //   icon: Icon(
-                  //     isFavorite ? Icons.bookmark : Icons.bookmark_outline,
-                  //   ),
-                  // ),
-                  // if (widget.onRemovePressed != null)
-                  //   IconButton(
-                  //     onPressed: widget.onRemovePressed,
-                  //     icon: const Icon(Icons.bookmark),
-                  //   ),
-                ],
+              child: Text(
+                widget.resep.durasi,
+                style: TextStyle(
+                  fontSize: 10,
+                  color: Colors.grey.shade700,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             const SizedBox(height: 5),

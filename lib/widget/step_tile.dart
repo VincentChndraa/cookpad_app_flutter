@@ -24,23 +24,22 @@ class StepTile extends StatelessWidget {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               shape: BoxShape.circle, // Bentuk bulat
-              color: Colors.grey[800], // Ganti dengan warna angka
+              color: Colors.grey[800],
             ),
             child: Text(
               number,
               style: TextStyle(
-                color: Colors.white, // Ganti dengan warna teks angka
+                color: Colors.white,
                 fontSize: 12,
               ),
             ),
           ),
-          SizedBox(width: 8), // Spasi antara angka dan teks
+          SizedBox(width: 8),
           Expanded(
             child: Text(
               textWithoutNumber,
               style: TextStyle(
-                color: Colors.black
-                    .withOpacity(0.8), // Ganti dengan warna teks yang cocok
+                color: Colors.black.withOpacity(0.8),
               ),
             ),
           ),

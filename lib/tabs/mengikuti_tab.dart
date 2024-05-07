@@ -14,14 +14,14 @@ class FirstTab extends StatefulWidget {
 class _FirstTabState extends State<FirstTab> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(25),
-      child: Center(
-        child: Scaffold(
-          // backgroundColor: Colors.blue.shade100,
-          body: ListView(
+    return Scaffold(
+      backgroundColor: Color(0xFFF8F6F2),
+      body: Padding(
+        padding: const EdgeInsets.all(25),
+        child: Center(
+          child: ListView(
             children: [
-              // Section 1
+              // Section 1 - Gambar
               Image.asset(
                 'assets/images/circle.png.jpeg',
                 width: 80,
@@ -64,11 +64,9 @@ class _FirstTabState extends State<FirstTab> {
               // Section 4
               Container(
                 height: MediaQuery.of(context).size.height / 3,
-                // width: MediaQuery.of(context).size.width,
                 padding: const EdgeInsets.only(bottom: 15.0),
                 child: ListView.separated(
                   padding: EdgeInsets.symmetric(horizontal: 3),
-                  // shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemCount: UserData.length,
                   separatorBuilder: (_, __) {

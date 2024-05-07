@@ -20,11 +20,11 @@ class ProfileScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Nama User",
+                "Emma",
                 style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
               ),
               Text(
-                "Username",
+                "@emma_beau",
                 style: TextStyle(fontSize: 10),
               ),
             ],

@@ -21,12 +21,12 @@ class _DetailResepState extends State<DetailResep> {
     bool isFavorite = favoritesProvider.favoriteResep.contains(widget.resep);
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text(""),
         actions: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
-              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Icon(Icons.share_outlined),
                 const SizedBox(width: 25),
@@ -56,9 +56,10 @@ class _DetailResepState extends State<DetailResep> {
           )
         ],
       ),
+      backgroundColor: Colors.white,
       body: ListView(
         children: [
-          // Section 1 - Gambar
+          // Section 1 - Gambar Resep
           GestureDetector(
             child: Container(
               height: 280,
@@ -67,10 +68,10 @@ class _DetailResepState extends State<DetailResep> {
                   image: DecorationImage(
                       image: AssetImage(widget.resep.image),
                       fit: BoxFit.cover)),
-              child: Container(
-                height: 280,
-                width: MediaQuery.of(context).size.width,
-              ),
+              // child: Container(
+              //   height: 280,
+              //   width: MediaQuery.of(context).size.width,
+              // ),
             ),
           ),
 
@@ -83,8 +84,7 @@ class _DetailResepState extends State<DetailResep> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Judul - Button Favorit
-
+                  // Judul resep dan tombol favorit
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -120,7 +120,7 @@ class _DetailResepState extends State<DetailResep> {
                     ],
                   ),
 
-                  // Profile User
+                  // Informasi user
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
@@ -190,7 +190,7 @@ class _DetailResepState extends State<DetailResep> {
             },
           ),
 
-          // Section 4 - Deskripsi
+          // Section 4 - Langkah - Langkah Memasak
           ListView.builder(
             shrinkWrap: true,
             padding: EdgeInsets.zero,
@@ -237,7 +237,8 @@ class _DetailResepState extends State<DetailResep> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(15),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
                   child: ButtonCustom(
                     onPressed: () {},
                     label: "Ikuti",

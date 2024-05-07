@@ -21,8 +21,10 @@ class _SecondTabState extends State<SecondTab> {
     final favoriteProvider = Provider.of<FavouriteProvider>(context);
 
     return Scaffold(
+      backgroundColor: Color(0xFFF8F6F2),
       body: ListView(
         children: [
+          // Section 1
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -33,15 +35,17 @@ class _SecondTabState extends State<SecondTab> {
                   children: [
                     Text(
                       "Apa isi kulkasmu?",
-                      style: TextStyle(fontWeight: FontWeight.w900),
+                      style:
+                          TextStyle(fontWeight: FontWeight.w900, fontSize: 16),
                     ),
                     Text("Pilih hingga 3 bahan"),
                   ],
                 ),
               ),
+
+              // Section 2
               Container(
                 height: 35,
-                margin: const EdgeInsets.only(top: 8),
                 child: ListView.separated(
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
@@ -55,11 +59,9 @@ class _SecondTabState extends State<SecondTab> {
                     return Container(
                       alignment: Alignment.topCenter,
                       child: TextButton(
-                        onPressed: () {
-                          // Do something with ingredientsItems[index]
-                        },
+                        onPressed: () {},
                         style: OutlinedButton.styleFrom(
-                          side: BorderSide(color: Colors.green, width: 1),
+                          backgroundColor: Colors.grey.shade300,
                         ),
                         child: Row(
                           children: [
@@ -87,14 +89,19 @@ class _SecondTabState extends State<SecondTab> {
                   },
                 ),
               ),
+              const SizedBox(height: 15),
+
+              // Section 3
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
                   "Resep Terbaru",
-                  style: TextStyle(fontWeight: FontWeight.w900),
+                  style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16),
                 ),
               ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 5),
+
+              // Section 4 - Recipe Card
               Container(
                 // width: MediaQuery.of(context).size.width,
                 padding: const EdgeInsets.all(16.0),
@@ -111,9 +118,6 @@ class _SecondTabState extends State<SecondTab> {
                   itemBuilder: (context, index) {
                     return RecipeCard(
                       resep: dataRecipe[index],
-                      // onFavoritePressed: () {
-                      //   favoriteProvider.addFavorite(dataRecipe[index]);
-                      // },
                     );
                   },
                 ),

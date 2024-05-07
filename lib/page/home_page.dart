@@ -20,6 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.white,
           leading: Padding(
             padding: EdgeInsets.only(left: 10),
             child: Image.asset(
@@ -51,12 +52,13 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.only(right: 10),
               child: IconButton(
                 icon: Icon(Icons.chat_bubble_rounded),
-                tooltip: "Notifications",
+                tooltip: "Activities",
                 onPressed: () {},
               ),
             )
           ],
         ),
+        backgroundColor: Colors.white,
         body: Column(
           children: [
             TabBar(
@@ -129,6 +131,7 @@ class MySearchDelegate extends SearchDelegate {
         final suggestion = suggestions[index];
 
         return ListTile(
+          tileColor: Colors.white,
           leading: Image.asset(
             suggestion.image,
             fit: BoxFit.cover,

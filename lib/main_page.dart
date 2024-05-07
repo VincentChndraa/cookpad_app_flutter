@@ -9,8 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class BottomNavigation extends StatefulWidget {
-  // const BottomNavigation({super.key});
-
   @override
   State<BottomNavigation> createState() => _BottomNavigationState();
 }
@@ -27,11 +25,13 @@ class _BottomNavigationState extends State<BottomNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: _buildBody(),
       bottomNavigationBar: Container(
+        // decoration: BoxDecoration(color: Colors.white),
         height: 60,
         child: NavigationBar(
-          backgroundColor: Colors.white70,
+          backgroundColor: Colors.white,
           selectedIndex: _currentIndex,
           onDestinationSelected: (index) =>
               setState(() => this._currentIndex = index),
@@ -53,15 +53,17 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 selectedIcon:
                     Icon(Icons.add_box_outlined, color: Colors.amber.shade800)),
             NavigationDestination(
-                icon: Icon(Icons.workspace_premium_outlined),
-                label: '',
-                selectedIcon: Icon(Icons.workspace_premium_outlined,
-                    color: Colors.amber.shade800)),
+              icon: Icon(Icons.workspace_premium_outlined),
+              label: '',
+              selectedIcon: Icon(Icons.workspace_premium_outlined,
+                  color: Colors.amber.shade800),
+            ),
             NavigationDestination(
-                icon: Icon(Icons.person_2_outlined),
-                label: '',
-                selectedIcon: Icon(Icons.person_2_outlined,
-                    color: Colors.amber.shade800)),
+              icon: Icon(Icons.person_2_outlined),
+              label: '',
+              selectedIcon:
+                  Icon(Icons.person_2_outlined, color: Colors.amber.shade800),
+            ),
           ],
         ),
       ),

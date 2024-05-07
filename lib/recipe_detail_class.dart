@@ -125,7 +125,7 @@ Bumbu penyedap : garam, kaldu ayam / msg, gula merah
     image: "assets/images/nasi_liwet.jpg",
     judul: "Nasi Liwet Gurih ",
     deskripsi: """
-    Nasi Liwet by Vincent. Nasi liwet yang gurih dan dimakan bersama aneka macam lauk. Pada resep kali ini nasi liwet gurih dihidangkan dengan opor ayam panggang, telur rebus, kuluban (sayur urap) dan sambal korek. Proses masaknya saya menggunakan alat kuali tanah liat agar makin enak rasa dan aromanya.
+Nasi liwet yang gurih dan dimakan bersama aneka macam lauk. Pada resep kali ini nasi liwet gurih dihidangkan dengan opor ayam panggang, telur rebus, kuluban (sayur urap) dan sambal korek. Proses masaknya saya menggunakan alat kuali tanah liat agar makin enak rasa dan aromanya.
     """,
     durasi: "5 menit yang lalu",
     bahan2: """
@@ -157,8 +157,7 @@ Kaldu bubuk secukupnya
     image: "assets/images/beef_bibimbap_recipe.jpeg",
     judul: "Beef Bibimbap",
     deskripsi: """
-    Bibimbap, salah satu makanan dari korea yang sangat populer dan rasanya absolutely delicious!
-    Saya suka banget bibimbap dan cukup gampang buatnya. Resep kali ini cuma pakai bahan" yang ada di kulkas.
+Bibimbap, salah satu makanan dari korea yang sangat populer dan rasanya absolutely delicious! Saya suka banget bibimbap dan cukup gampang buatnya. Resep kali ini cuma pakai bahan" yang ada di kulkas.
     """,
     durasi: "29 menit yang lalu",
     bahan2: """
@@ -199,8 +198,8 @@ Garam secukupnya
     image: "assets/images/Salmon Teriyaki.jpg",
     judul: "Salmon Teriyaki (Donburi ala Jepang untuk orang Diet)",
     deskripsi: """
-    Beberapa hari lalu aku dikasih hadiah dari temen aku jadinya auto kepikiran bikin rice bowl a.k.a donburi.
-    Tapi karena masih diet, jadi untuk nasi nya kuganti jadi parutan kembang kol. Enak juga ternyata. Teksturnya jadi mirip nasi tapi pastinya lebih rendah kalori dan lebih banyak serat.
+Beberapa hari lalu aku dikasih hadiah dari temen aku jadinya auto kepikiran bikin rice bowl a.k.a donburi.
+Tapi karena masih diet, jadi untuk nasi nya kuganti jadi parutan kembang kol. Enak juga ternyata. Teksturnya jadi mirip nasi tapi pastinya lebih rendah kalori dan lebih banyak serat.
     """,
     durasi: "3 minggu yang lalu",
     bahan2: """
@@ -235,8 +234,8 @@ Sejumput nori bubuk
     image: "assets/images/ChickenSkinSaltedEgg.jpg",
     judul: "Crispy Chicken Skin with Salted Egg Sauce",
     deskripsi: """
-    Sering pengin makan salted egg sauce tapi suka males karena ribet. Mau pake yang instan rasanya sedikit kurang pas
-    Semoga resep ini nggak terlalu ribet yaa. Cuma butuh sedikit effort aja kok hehe
+Sering pengin makan salted egg sauce tapi suka males karena ribet. Mau pake yang instan rasanya sedikit kurang pas
+Semoga resep ini nggak terlalu ribet yaa. Cuma butuh sedikit effort aja kok hehe
     """,
     durasi: "1 minggu yang lalu",
     bahan2: """
@@ -272,8 +271,8 @@ Penyedap
     image: "assets/images/AyamBetutuwithSambelMatah.jpg",
     judul: "Ayam Betutu Sambel Matah Khas Bali",
     deskripsi: """
-    Baru aja balik dari bali tapi udah rindu sama Ayam betutu dan Sambel matah nya ajaaaa.
-    Jadi hari ini aku mau masak ayam betutu dan sambel matah khas bali made by me.
+Baru aja balik dari bali tapi udah rindu sama Ayam betutu dan Sambel matah nya ajaaaa.
+Jadi hari ini aku mau masak ayam betutu dan sambel matah khas bali made by me.
      """,
     durasi: "2 Bulan yang lalu",
     bahan2: """
@@ -325,7 +324,7 @@ Minyak panas secukupnya
     image: "assets/images/BPK.jpg",
     judul: "Babi Panggang Karo (NON HALAL)",
     deskripsi: """
-    Ada 1 slice daging babi dikulkas tanggung kalo di saksang jd dipanggang aja buat berdua 
+Ada 1 slice daging babi dikulkas tanggung kalo di saksang jd dipanggang aja buat berdua 
      """,
     durasi: "9 Bulan yang lalu",
     bahan2: """
@@ -364,7 +363,7 @@ Secukupnya kaldu jamur
     image: "assets/images/GuramiAsMa.jpg",
     judul: "Gurame AsMa (Asam Manis)",
     deskripsi: """
-   Abang tuksay lewat kebetulan ada ikan gurame beratnya 700gr wahhh gede banget , kalo beli Gurame AsMa di restoran pasti mahal mending masak sendiri 
+Abang tuksay lewat kebetulan ada ikan gurame beratnya 700gr wahhh gede banget , kalo beli Gurame AsMa di restoran pasti mahal mending masak sendiri 
      """,
     durasi: "1 Tahun yang lalu",
     bahan2: """
@@ -409,7 +408,7 @@ Secukupnya air dingin
     image: "assets/images/SA.jpg",
     judul: "Sayur Asem",
     deskripsi: """
-   Yok kembali ke bumi lagii, setelah makanan lebaran penuh santan dan gulaa, mari kita hempaskan dengan sayur asem.
+Yok kembali ke bumi lagii, setelah makanan lebaran penuh santan dan gulaa, mari kita hempaskan dengan sayur asem.
 Jangan lupa lengkapi dengan tempe goreng, sambal dan ikan asin Maaak.. 
      """,
     durasi: "5 menit yang lalu",

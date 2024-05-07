@@ -8,8 +8,7 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: ((MediaQuery.of(context).size.width - 16 - 16) / 2) -
-          8, // 16  = horizontal padding , /2 = because there is 2 box horizontal, -8 = distance between box, 8*2 = 16
+      width: ((MediaQuery.of(context).size.width - 16 - 16) / 2) - 8,
       height: 80,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),

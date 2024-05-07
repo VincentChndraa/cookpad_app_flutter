@@ -30,14 +30,18 @@ class PictureCard extends StatelessWidget {
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10))),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              child: Text(
-                title,
-                overflow: TextOverflow.ellipsis,
-                textAlign: TextAlign.left,
-                maxLines: 2,
-                style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+            Container(
+              height: 38,
+              width: 90,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                child: Text(
+                  title,
+                  // overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.left,
+                  maxLines: 2,
+                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
           ],
